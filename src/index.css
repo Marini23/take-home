@@ -44,3 +44,27 @@
     transform: rotate(450deg);
   }
 }
+
+.animation-container {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.animation-list {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.animation-container.expanded {
+  max-height: 160px;
+}
+
+.animation-container.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.animation-list.visible {
+  opacity: 1;
+}
